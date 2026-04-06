@@ -447,10 +447,7 @@ export default function HumanLoyaltyLandingPage() {
                   <p className="mt-3 text-sm leading-relaxed text-white/76">
                     Escolha um ponto crítico — fricção, coerência, governança ou hábito — e rode um piloto de 30 dias com um único objetivo mensurável.
                   </p>
-                  <SecondaryButton className="mt-5 w-full">
-                    <Download className="h-4 w-4" />
-                    Baixar material em PDF
-                  </SecondaryButton>
+
                 </Card>
               </div>
             </div>
@@ -619,18 +616,19 @@ export default function HumanLoyaltyLandingPage() {
 
         <section id="comprar" className="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
           <div className="mx-auto max-w-7xl">
-            <SectionTitle eyebrow="Livro" title="Escolha onde comprar" />
+            <SectionTitle eyebrow="Livro" title="Compre na Amazon" />
 
-            <div className="mt-8 grid gap-4 lg:grid-cols-3">
-              {["Amazon", "Editora / Loja oficial", "Outras livrarias"].map((label) => (
-                <Card key={label} className="p-7">
-                  <p className="text-xl font-semibold">{label}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-white/72">Substitua pelo link oficial.</p>
-                  <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B6B] hover:text-[#ff8a8a]">
-                    Comprar <ExternalLink className="h-4 w-4" />
-                  </button>
-                </Card>
-              ))}
+            <div className="mt-8 max-w-xl">
+              <Card className="p-7">
+                <p className="text-xl font-semibold">Amazon</p>
+                <p className="mt-3 text-sm leading-relaxed text-white/72">
+                  Garanta seu exemplar de <span className="text-white">O Algoritmo do Coração</span>.
+                </p>
+
+                <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B6B] hover:text-[#ff8a8a]">
+                  Comprar na Amazon <ExternalLink className="h-4 w-4" />
+                </button>
+              </Card>
             </div>
           </div>
         </section>
