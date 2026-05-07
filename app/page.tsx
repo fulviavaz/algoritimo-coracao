@@ -713,22 +713,67 @@ export default function HumanLoyaltyLandingPage() {
               />
 
               <Card className="p-6">
-                <form className="grid gap-3" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="text"
-                    placeholder="Seu nome"
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[#FF3B3B]/40"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Seu e-mail"
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[#FF3B3B]/40"
-                  />
-                  <PrimaryButton type="submit" className="w-full">
-                    <Mail className="h-4 w-4" />
-                    Quero acompanhar
-                  </PrimaryButton>
-                </form>
+                <form
+  className="grid gap-3"
+  onSubmit={async (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      type: "Atualizações / Newsletter",
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: "Usuário quer receber ensaios, convites e novidades do projeto.",
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error("Erro no envio:", result);
+        alert("Erro ao enviar. Verifique os logs da Vercel.");
+        return;
+      }
+
+      alert("Enviado com sucesso!");
+      form.reset();
+    } catch (error) {
+      console.error("Erro ao submeter formulário:", error);
+      alert("Erro ao enviar. Tente novamente.");
+    }
+  }}
+>
+  <input
+    name="name"
+    type="text"
+    placeholder="Seu nome"
+    required
+    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[#FF3B3B]/40"
+  />
+
+  <input
+    name="email"
+    type="email"
+    placeholder="Seu e-mail"
+    required
+    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none placeholder:text-white/35 focus:border-[#FF3B3B]/40"
+  />
+
+  <PrimaryButton type="submit" className="w-full">
+    <Mail className="h-4 w-4" />
+    Quero acompanhar
+  </PrimaryButton>
+</form>
                 <p className="mt-4 text-xs leading-relaxed text-white/58">
                   Privacidade por design: envie apenas o necessário.
                 </p>
