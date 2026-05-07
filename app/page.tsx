@@ -124,6 +124,9 @@ function SecondaryButton({
   );
 }
 
+const AMAZON_BOOK_URL =
+  "https://www.amazon.com.br/algoritmo-cora%C3%A7%C3%A3o-perspectivas-estrat%C3%A9gicas-relacionamento/dp/8550829048";
+
 export default function HumanLoyaltyLandingPage() {
   const [diag, setDiag] = useState({
     strategy: 3,
@@ -221,10 +224,14 @@ export default function HumanLoyaltyLandingPage() {
           </nav>
 
           <div className="flex items-center gap-2">
-
-            <PrimaryButton onClick={() => scrollToId("comprar")} className="px-4 py-2">
-              Comprar agora
-            </PrimaryButton>
+<a
+  href={AMAZON_BOOK_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FF3B3B] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#ff5252]"
+>
+  Comprar agora
+</a>
           </div>
         </div>
       </header>
@@ -259,10 +266,12 @@ export default function HumanLoyaltyLandingPage() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <PrimaryButton onClick={() => scrollToId("comprar")}>
-                  <BookOpen className="h-4 w-4" />
-                  Comprar o livro
-                </PrimaryButton>
+              <a href={AMAZON_BOOK_URL} target="_blank" rel="noopener noreferrer">
+  <PrimaryButton>
+    <BookOpen className="h-4 w-4" />
+    Comprar o livro
+  </PrimaryButton>
+</a>
 
                 <SecondaryButton onClick={() => scrollToId("talks")}>
                   <Flame className="h-4 w-4" />
@@ -625,9 +634,14 @@ export default function HumanLoyaltyLandingPage() {
                   Garanta seu exemplar de <span className="text-white">O Algoritmo do Coração</span>.
                 </p>
 
-                <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B6B] hover:text-[#ff8a8a]">
-                  Comprar na Amazon <ExternalLink className="h-4 w-4" />
-                </button>
+              <a
+  href={AMAZON_BOOK_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B6B] hover:text-[#ff8a8a]"
+>
+  Comprar na Amazon <ExternalLink className="h-4 w-4" />
+</a>
               </Card>
             </div>
           </div>
