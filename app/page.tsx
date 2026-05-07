@@ -378,8 +378,50 @@ export default function HumanLoyaltyLandingPage() {
                     <p className="mt-3 text-sm leading-relaxed text-white/78">{text}</p>
                   </Card>
                 ))}
-              </div>
+                          </div>
             </div>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-7xl">
+            <Card className="p-6 sm:p-8 lg:p-10">
+              <p className="text-xs uppercase tracking-[0.28em] text-white/45">
+                Além da Eficiência
+              </p>
+
+              <h3 className="mt-3 max-w-4xl text-2xl font-semibold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+                Um manifesto sobre relacionamento em tempos algorítmicos
+              </h3>
+
+              <div className="mt-8 grid gap-6 text-sm leading-relaxed text-white/72 sm:text-base lg:grid-cols-2">
+                <div className="space-y-5">
+                  <p>
+                    A IA é um espelho, não uma máscara. Empresas utilitaristas criam algoritmos invasivos, mas as que respeitam seus clientes criam tecnologias que amplificam a humanidade. O código que você escreve e o dado que você coleta dizem tudo sobre quem você é antes mesmo de dizerem o que você vende. A regra é clara, a tecnologia precisa servir ao vínculo, nunca o contrário.
+                  </p>
+
+                  <p>
+                    O fim da perseguição. O mercado saturou. Ninguém mais aguenta ser caçado por cookies ou algoritmos de extração. A defesa do Zero-Party Data existe por uma razão ética, o dado é um voto de confiança. Se o cliente compartilha uma intenção, a nossa obrigação é devolver valor real, não spam mascarado de oportunidade. A troca é necessária.
+                  </p>
+
+                  <p>
+                    Máquinas fazem o mecânico e humanos fazem o que é vivo. Escala e repetição pertencem aos processadores. Mas a empatia, o tato em uma crise e o salto criativo são territórios exclusivamente nossos. Uma IA verdadeiramente inteligente é aquela que sabe a hora de agir e mais importante, a hora de sair do caminho e deixar que duas pessoas conversem.
+                  </p>
+                </div>
+
+                <div className="space-y-5">
+                  <p>
+                    A ciência do grupo, a arte do indivíduo. Clusters e personas são o ponto de partida. Eles dão a ordem e a escala, mas é a individuação que traz a alma. O engajamento real acontece quando a estrutura dos segmentos é usada para sustentar o reconhecimento da singularidade. Pessoas carregam micro-identidades fluidas e o nosso papel é garantir que a eficiência do grupo nunca atropele a dignidade do indivíduo.
+                  </p>
+
+                  <p>
+                    O lucro é o aplauso. Fidelidade não se impõe com contrato ou multa, ela é conquistada com coerência, transparência e entrega. Quando o relacionamento é baseado em respeito e utilidade, o resultado financeiro aparece como consequência natural. Quem foca só no número perde a alma. Quem foca na alma, ganha o jogo a longo prazo.
+                  </p>
+
+                  <p className="border-l-2 border-[#FF3B3B] pl-5 text-lg font-semibold leading-snug text-white">
+                    Sua marca está construindo um código ou um vínculo?
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </section>
 
