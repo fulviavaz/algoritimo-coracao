@@ -15,7 +15,7 @@ export async function POST(req: Request) {
         const message = body.message || "Sem mensagem";
 
         const { data, error } = await resend.emails.send({
-            from: "Site INDICO <onboarding@resend.dev>",
+            from: "Site INDICO <contato@indico.net.br>",
             to: [ALERT_EMAIL],
             subject: `Novo formulário recebido - ${type}`,
             replyTo: email !== "Não informado" ? email : undefined,
